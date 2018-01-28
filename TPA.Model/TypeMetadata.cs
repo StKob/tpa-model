@@ -40,18 +40,28 @@ namespace TPA.Model
     
         public ICollection<TypeMetadata> NestedTypes { get; set; }
 
+        public TypeMetadata DeclaringType { get; set; }
+
+        public ICollection<PropertyMetadata> TypeProperties { get; set; }
+
+        public ICollection<MethodMetadata> Methods { get; set; }
+        public ICollection<MethodMetadata> Constructors { get; set; }
+        public ICollection<FieldMetadata> Fields { get; set; }
+
+        public bool IsBuiltIn { get; set; }
+
+        public bool IsGeneric { get; set; }
+
         [Key]
         public virtual int Id { get; set; }
 
         [ForeignKey("IsTemplateIn")]
         public virtual int? IsTemplateInId { get; set; }
 
-        [ForeignKey("IsNestedIn")]
-        public virtual int? IsNestedInId { get; set; }
+        [ForeignKey("DeclaringType")]
+        public virtual int? DeclaringTypeId { get; set; }
 
         public virtual TypeMetadata IsTemplateIn { get; set; }
-
-        public virtual TypeMetadata IsNestedIn { get; set; }
 
         public virtual AccessLevel? AccessLevel { get; set; }
 

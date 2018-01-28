@@ -3,3 +3,8 @@ select * from NamespaceMetadatas
 select * from TypeMetadatas
 select * from TypesAttributes
 select * from AttributeMetadatas
+select * from TypesInterfaces	
+select * from PropertyMetadatas
+select * from MethodMetadatas
+select * from FieldMetadatas
+select * from TypesInterfaces

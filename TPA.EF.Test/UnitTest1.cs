@@ -55,6 +55,13 @@ namespace TPA.EF.Test
 
             t1.GenericArguments = new List<TypeMetadata>() { t4, t5 };
 
+            PropertyMetadata p = new PropertyMetadata();
+
+            p.Name = "awesomeProperty";
+            p.Type = t1;
+
+            t1.TypeProperties = new List<PropertyMetadata>() { p };
+
 
             n1.Types = new List<TypeMetadata>()
             {

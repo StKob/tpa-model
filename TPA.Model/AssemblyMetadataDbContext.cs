@@ -13,6 +13,9 @@ namespace TPA.Model
         public DbSet<NamespaceMetadata> NamespaceMetadatas { get; set; }
         public DbSet<TypeMetadata> TypeMetadatas { get; set; }
         public DbSet<AttributeMetadata> AttributeMetadatas { get; set; }
+        public DbSet<PropertyMetadata> PropertyMetadatas { get; set; }
+        public DbSet<MethodMetadata> MethodMetadatas { get; set; }
+        public DbSet<FieldMetadata> FieldMetadatas { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -23,8 +26,8 @@ namespace TPA.Model
 
             modelBuilder.Entity<TypeMetadata>()
                 .HasMany(t => t.NestedTypes)
-                .WithOptional(t => t.IsNestedIn)
-                .HasForeignKey<int?>(t => t.IsNestedInId);
+                .WithOptional(t => t.DeclaringType)
+                .HasForeignKey<int?>(t => t.DeclaringTypeId);
 
             modelBuilder.Entity<TypeMetadata>()
                 .HasMany<AttributeMetadata>(t => t.Attributes)
