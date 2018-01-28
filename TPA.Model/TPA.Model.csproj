@@ -51,6 +51,7 @@
     <Compile Include="AccessLevel.cs" />
     <Compile Include="AssemblyMetadata.cs" />
     <Compile Include="AssemblyMetadataDbContext.cs" />
+    <Compile Include="AttributeMetadata.cs" />
     <Compile Include="Migrations\201801281743230_InitialMigration.cs" />
     <Compile Include="Migrations\201801281743230_InitialMigration.Designer.cs">
       <DependentUpon>201801281743230_InitialMigration.cs</DependentUpon>
@@ -95,10 +96,47 @@
     <Compile Include="Migrations\201801282059296_AddTypeKind.Designer.cs">
       <DependentUpon>201801282059296_AddTypeKind.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801282104459_AddInitialAttributeMetadata.cs" />
+    <Compile Include="Migrations\201801282104459_AddInitialAttributeMetadata.Designer.cs">
+      <DependentUpon>201801282104459_AddInitialAttributeMetadata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801282113148_AttrMtdToTypeMtd.cs" />
+    <Compile Include="Migrations\201801282113148_AttrMtdToTypeMtd.Designer.cs">
+      <DependentUpon>201801282113148_AttrMtdToTypeMtd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801282123152_AttrMtdManyToManyFix.cs" />
+    <Compile Include="Migrations\201801282123152_AttrMtdManyToManyFix.Designer.cs">
+      <DependentUpon>201801282123152_AttrMtdManyToManyFix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801282127326_AddVirtuals.cs" />
+    <Compile Include="Migrations\201801282127326_AddVirtuals.Designer.cs">
+      <DependentUpon>201801282127326_AddVirtuals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801282129346_AddVirtualEnums.cs" />
+    <Compile Include="Migrations\201801282129346_AddVirtualEnums.Designer.cs">
+      <DependentUpon>201801282129346_AddVirtualEnums.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801282130511_AddMoreVirtuals.cs" />
+    <Compile Include="Migrations\201801282130511_AddMoreVirtuals.Designer.cs">
+      <DependentUpon>201801282130511_AddMoreVirtuals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801282132356_AddEvenMoreVirtuals.cs" />
+    <Compile Include="Migrations\201801282132356_AddEvenMoreVirtuals.Designer.cs">
+      <DependentUpon>201801282132356_AddEvenMoreVirtuals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801282137338_AddImplementedInterfacesToTypeMtd.cs" />
+    <Compile Include="Migrations\201801282137338_AddImplementedInterfacesToTypeMtd.Designer.cs">
+      <DependentUpon>201801282137338_AddImplementedInterfacesToTypeMtd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801282209379_AddNestedTypes.cs" />
+    <Compile Include="Migrations\201801282209379_AddNestedTypes.Designer.cs">
+      <DependentUpon>201801282209379_AddNestedTypes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NamespaceMetadata.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SealedEnum.cs" />
+    <Compile Include="StaticEnum.cs" />
     <Compile Include="TypeKind.cs" />
     <Compile Include="TypeMetadata.cs" />
   </ItemGroup>
@@ -141,6 +179,33 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801282059296_AddTypeKind.resx">
       <DependentUpon>201801282059296_AddTypeKind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801282104459_AddInitialAttributeMetadata.resx">
+      <DependentUpon>201801282104459_AddInitialAttributeMetadata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801282113148_AttrMtdToTypeMtd.resx">
+      <DependentUpon>201801282113148_AttrMtdToTypeMtd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801282123152_AttrMtdManyToManyFix.resx">
+      <DependentUpon>201801282123152_AttrMtdManyToManyFix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801282127326_AddVirtuals.resx">
+      <DependentUpon>201801282127326_AddVirtuals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801282129346_AddVirtualEnums.resx">
+      <DependentUpon>201801282129346_AddVirtualEnums.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801282130511_AddMoreVirtuals.resx">
+      <DependentUpon>201801282130511_AddMoreVirtuals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801282132356_AddEvenMoreVirtuals.resx">
+      <DependentUpon>201801282132356_AddEvenMoreVirtuals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801282137338_AddImplementedInterfacesToTypeMtd.resx">
+      <DependentUpon>201801282137338_AddImplementedInterfacesToTypeMtd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801282209379_AddNestedTypes.resx">
+      <DependentUpon>201801282209379_AddNestedTypes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

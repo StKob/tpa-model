@@ -7,15 +7,11 @@ using System.Threading.Tasks;
 
 namespace TPA.Model
 {
-    public class AssemblyMetadata
+    public class AttributeMetadata
     {
         [Key]
         public virtual int Id { get; set; }
-        public string Name { get; set; }
-        public ICollection<NamespaceMetadata> Namespaces { get; set; }
 
-
-
-
+        public virtual ICollection<TypeMetadata> TypesUsingThisAttribute { get; set; }
     }
 }

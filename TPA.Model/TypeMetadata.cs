@@ -10,14 +10,6 @@ namespace TPA.Model
 {
     public class TypeMetadata
     {
-        [Key]
-        public int Id { get; set; }
-
-        [ForeignKey("IsTemplateIn")]
-        public int? IsTemplateInId { get; set; }
-
-        public TypeMetadata IsTemplateIn { get; set; }
-
         public string Name { get; set; }
 
         public string NamespaceName { get; set; }
@@ -25,12 +17,6 @@ namespace TPA.Model
         public TypeMetadata BaseType { get; set; }
 
         public ICollection<TypeMetadata> GenericArguments { get; set; }
-
-        public AccessLevel? AccessLevel { get; set; }
-
-        public SealedEnum? SealedEnum { get; set; }
-
-        public AbstractEnum? AbstractEnum { get; set; }
 
         public Tuple<AccessLevel, SealedEnum, AbstractEnum> Modifiers
         {
@@ -48,10 +34,32 @@ namespace TPA.Model
 
         public TypeKind? KindOfType { get; set; }
 
+        public ICollection<AttributeMetadata> Attributes { get; set; }
 
+        public ICollection<TypeMetadata> ImplementedInterfaces { get; set; }
+    
+        public ICollection<TypeMetadata> NestedTypes { get; set; }
 
+        [Key]
+        public virtual int Id { get; set; }
 
+        [ForeignKey("IsTemplateIn")]
+        public virtual int? IsTemplateInId { get; set; }
 
+        [ForeignKey("IsNestedIn")]
+        public virtual int? IsNestedInId { get; set; }
+
+        public virtual TypeMetadata IsTemplateIn { get; set; }
+
+        public virtual TypeMetadata IsNestedIn { get; set; }
+
+        public virtual AccessLevel? AccessLevel { get; set; }
+
+        public virtual SealedEnum? SealedEnum { get; set; }
+
+        public virtual AbstractEnum? AbstractEnum { get; set; }
+
+        public virtual ICollection<TypeMetadata> TypesImplementingThisInterface { get; set; }
 
     }
 }
