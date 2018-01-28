@@ -41,6 +41,7 @@ namespace TPA.EF.Test
 
             var t1 = new TypeMetadata();
             t1.Name = "t1Name";
+            t1.Modifiers = new Tuple<AccessLevel, SealedEnum, AbstractEnum>(AccessLevel.Public, SealedEnum.NotSealed, AbstractEnum.NotAbstract);
             var t2 = new TypeMetadata();
             t2.Name = "t2Name";
             var t3 = new TypeMetadata();

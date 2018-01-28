@@ -47,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractEnum.cs" />
+    <Compile Include="AccessLevel.cs" />
     <Compile Include="AssemblyMetadata.cs" />
     <Compile Include="AssemblyMetadataDbContext.cs" />
     <Compile Include="Migrations\201801281743230_InitialMigration.cs" />
@@ -73,9 +75,31 @@
     <Compile Include="Migrations\201801282002571_GenericArgumentsDbFixOfFix.Designer.cs">
       <DependentUpon>201801282002571_GenericArgumentsDbFixOfFix.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801282031069_AddEnumsAndModifierPropToTypeMtd.cs" />
+    <Compile Include="Migrations\201801282031069_AddEnumsAndModifierPropToTypeMtd.Designer.cs">
+      <DependentUpon>201801282031069_AddEnumsAndModifierPropToTypeMtd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801282038440_AccessLevelTest.cs" />
+    <Compile Include="Migrations\201801282038440_AccessLevelTest.Designer.cs">
+      <DependentUpon>201801282038440_AccessLevelTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801282052511_ModifiersFix.cs" />
+    <Compile Include="Migrations\201801282052511_ModifiersFix.Designer.cs">
+      <DependentUpon>201801282052511_ModifiersFix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801282056531_ModifiersAddNullable.cs" />
+    <Compile Include="Migrations\201801282056531_ModifiersAddNullable.Designer.cs">
+      <DependentUpon>201801282056531_ModifiersAddNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801282059296_AddTypeKind.cs" />
+    <Compile Include="Migrations\201801282059296_AddTypeKind.Designer.cs">
+      <DependentUpon>201801282059296_AddTypeKind.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NamespaceMetadata.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SealedEnum.cs" />
+    <Compile Include="TypeKind.cs" />
     <Compile Include="TypeMetadata.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -102,6 +126,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801282002571_GenericArgumentsDbFixOfFix.resx">
       <DependentUpon>201801282002571_GenericArgumentsDbFixOfFix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801282031069_AddEnumsAndModifierPropToTypeMtd.resx">
+      <DependentUpon>201801282031069_AddEnumsAndModifierPropToTypeMtd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801282038440_AccessLevelTest.resx">
+      <DependentUpon>201801282038440_AccessLevelTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801282052511_ModifiersFix.resx">
+      <DependentUpon>201801282052511_ModifiersFix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801282056531_ModifiersAddNullable.resx">
+      <DependentUpon>201801282056531_ModifiersAddNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801282059296_AddTypeKind.resx">
+      <DependentUpon>201801282059296_AddTypeKind.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
