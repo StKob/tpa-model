@@ -7,13 +7,11 @@ using System.Threading.Tasks;
 
 namespace TPA.Model
 {
-    public class AttributeMetadata
+    public class ParameterMetadata
     {
         [Key]
         public virtual int Id { get; set; }
         public string Name { get; set; }
-        public TypeMetadata AttributeType { get; set; }
-        public virtual ICollection<TypeMetadata> TypesUsingThisAttribute { get; set; }
-        public virtual ICollection<MethodMetadata> MethodsUsingThisAttribute { get; set; }
+        public TypeMetadata Type { get; set; }
     }
 }

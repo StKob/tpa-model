@@ -16,6 +16,7 @@ namespace TPA.Model
         public DbSet<PropertyMetadata> PropertyMetadatas { get; set; }
         public DbSet<MethodMetadata> MethodMetadatas { get; set; }
         public DbSet<FieldMetadata> FieldMetadatas { get; set; }
+        public DbSet<ParameterMetadata> ParameterMetadatas { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -36,7 +37,17 @@ namespace TPA.Model
                 {
                     cs.MapLeftKey("TypeId");
                     cs.MapRightKey("AttributeId");
-                    cs.ToTable("TypesAttributes");
+                    cs.ToTable("Types_UsedAttributes");
+                });
+
+            modelBuilder.Entity<MethodMetadata>()
+                .HasMany<AttributeMetadata>(t => t.Attributes)
+                .WithMany(a => a.MethodsUsingThisAttribute)
+                .Map(cs =>
+                {
+                    cs.MapLeftKey("MethodId");
+                    cs.MapRightKey("AttributeId");
+                    cs.ToTable("Methods_Attributes");
                 });
 
 
@@ -47,7 +58,7 @@ namespace TPA.Model
                 {
                     cs.MapLeftKey("ImplementorId");
                     cs.MapRightKey("InterfaceId");
-                    cs.ToTable("TypesInterfaces");
+                    cs.ToTable("Types_ImplementedInterfaces");
                 });
         }
     }
