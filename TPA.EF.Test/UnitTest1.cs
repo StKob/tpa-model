@@ -31,9 +31,43 @@ namespace TPA.EF.Test
 
             List<NamespaceMetadata> nspaces = new List<NamespaceMetadata>();
 
-            nspaces.Add(new NamespaceMetadata());
-            nspaces.Add(new NamespaceMetadata());
-            nspaces.Add(new NamespaceMetadata());
+            var n1 = new NamespaceMetadata();
+            var n2 = new NamespaceMetadata();
+            var n3 = new NamespaceMetadata();
+
+            n1.Name = "n1name";
+            n2.Name = "n2name";
+            n3.Name = "n3name";
+
+            var t1 = new TypeMetadata();
+            t1.Name = "t1Name";
+            var t2 = new TypeMetadata();
+            t2.Name = "t2Name";
+            var t3 = new TypeMetadata();
+            t3.Name = "t3Name";
+
+
+            n1.Types = new List<TypeMetadata>()
+            {
+                t1
+            };
+
+            t1.NamespaceName = n1.Name;
+
+            n2.Types = new List<TypeMetadata>()
+            {
+                t2, t3
+            };
+
+            t2.NamespaceName = n2.Name;
+            t3.NamespaceName = n2.Name;
+            t3.BaseType = t2;
+
+
+
+            nspaces.Add(n1);
+            nspaces.Add(n2);
+            nspaces.Add(n3);
 
             assemblyMetadata.Namespaces = nspaces;
 

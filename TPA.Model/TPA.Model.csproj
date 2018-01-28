@@ -53,6 +53,14 @@
     <Compile Include="Migrations\201801281743230_InitialMigration.Designer.cs">
       <DependentUpon>201801281743230_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801281808158_NamespaceNameInTypeMetadata.cs" />
+    <Compile Include="Migrations\201801281808158_NamespaceNameInTypeMetadata.Designer.cs">
+      <DependentUpon>201801281808158_NamespaceNameInTypeMetadata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801281809511_TypeMetadataBaseType.cs" />
+    <Compile Include="Migrations\201801281809511_TypeMetadataBaseType.Designer.cs">
+      <DependentUpon>201801281809511_TypeMetadataBaseType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NamespaceMetadata.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -67,6 +75,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201801281743230_InitialMigration.resx">
       <DependentUpon>201801281743230_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801281808158_NamespaceNameInTypeMetadata.resx">
+      <DependentUpon>201801281808158_NamespaceNameInTypeMetadata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801281809511_TypeMetadataBaseType.resx">
+      <DependentUpon>201801281809511_TypeMetadataBaseType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
