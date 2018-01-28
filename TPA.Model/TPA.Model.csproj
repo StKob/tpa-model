@@ -61,6 +61,18 @@
     <Compile Include="Migrations\201801281809511_TypeMetadataBaseType.Designer.cs">
       <DependentUpon>201801281809511_TypeMetadataBaseType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801281813108_TypeMetadataGenericArguments.cs" />
+    <Compile Include="Migrations\201801281813108_TypeMetadataGenericArguments.Designer.cs">
+      <DependentUpon>201801281813108_TypeMetadataGenericArguments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801281959578_GenericArgumentsDbFix.cs" />
+    <Compile Include="Migrations\201801281959578_GenericArgumentsDbFix.Designer.cs">
+      <DependentUpon>201801281959578_GenericArgumentsDbFix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801282002571_GenericArgumentsDbFixOfFix.cs" />
+    <Compile Include="Migrations\201801282002571_GenericArgumentsDbFixOfFix.Designer.cs">
+      <DependentUpon>201801282002571_GenericArgumentsDbFixOfFix.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NamespaceMetadata.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -81,6 +93,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801281809511_TypeMetadataBaseType.resx">
       <DependentUpon>201801281809511_TypeMetadataBaseType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801281813108_TypeMetadataGenericArguments.resx">
+      <DependentUpon>201801281813108_TypeMetadataGenericArguments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801281959578_GenericArgumentsDbFix.resx">
+      <DependentUpon>201801281959578_GenericArgumentsDbFix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801282002571_GenericArgumentsDbFixOfFix.resx">
+      <DependentUpon>201801282002571_GenericArgumentsDbFixOfFix.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

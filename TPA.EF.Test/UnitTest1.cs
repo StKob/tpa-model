@@ -46,13 +46,24 @@ namespace TPA.EF.Test
             var t3 = new TypeMetadata();
             t3.Name = "t3Name";
 
+            var t4 = new TypeMetadata();
+            t4.Name = "t4Name";
+
+            var t5 = new TypeMetadata();
+            t5.Name = "t4Name";
+
+            t1.GenericArguments = new List<TypeMetadata>() { t4, t5 };
+
 
             n1.Types = new List<TypeMetadata>()
             {
-                t1
+                t1, t4, t5
             };
 
             t1.NamespaceName = n1.Name;
+            t4.NamespaceName = n1.Name;
+            t5.NamespaceName = n1.Name;
+
 
             n2.Types = new List<TypeMetadata>()
             {
@@ -63,8 +74,6 @@ namespace TPA.EF.Test
             t3.NamespaceName = n2.Name;
             t3.BaseType = t2;
 
-
-
             nspaces.Add(n1);
             nspaces.Add(n2);
             nspaces.Add(n3);
@@ -74,6 +83,8 @@ namespace TPA.EF.Test
             context.AssemblyMetadatas.Add(assemblyMetadata);
 
             context.SaveChanges();
+
+                
         }
 
 
