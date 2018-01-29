@@ -2,9 +2,11 @@
 using System.ComponentModel.DataAnnotations;
 using System.Reflection;
 using System.Linq;
+using Newtonsoft.Json;
 
 namespace TPA.Model
 {
+    [JsonObject(IsReference = true)]
     public class FieldMetadata
     {
         [Key]

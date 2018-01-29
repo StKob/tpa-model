@@ -5,10 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
-
+using Newtonsoft.Json;
 
 namespace TPA.Model
 {
+    [JsonObject(IsReference = true)]
     public class NamespaceMetadata
     {
         [Key]

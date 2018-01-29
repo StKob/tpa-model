@@ -7,9 +7,11 @@ using static TPA.Model.TypeMetadata;
 using System.Runtime.Serialization;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
+using Newtonsoft.Json;
 
 namespace TPA.Model
 {
+    [JsonObject(IsReference = true)]
     public class MethodMetadata
     {
         [Key]

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
@@ -10,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace TPA.Model
 {
+    [JsonObject(IsReference = true)]
     public class PropertyMetadata
     {
         [Key]
