@@ -12,6 +12,22 @@ namespace TPA.Model
         [Key]
         public virtual int Id { get; set; }
         public string Name { get; set; }
-        public TypeMetadata Type { get; set; }
+        public TypeMetadata ParameterType { get; set; }
+
+
+
+
+
+
+        public ParameterMetadata(string name, TypeMetadata typeMetadata)
+        {
+            this.Name = name;
+            this.ParameterType = typeMetadata;
+        }
+
+        public ParameterMetadata()
+        {
+
+        }
     }
 }

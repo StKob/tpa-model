@@ -52,6 +52,7 @@
     <Compile Include="AssemblyMetadata.cs" />
     <Compile Include="AssemblyMetadataDbContext.cs" />
     <Compile Include="AttributeMetadata.cs" />
+    <Compile Include="ExtensionMethods.cs" />
     <Compile Include="FieldMetadata.cs" />
     <Compile Include="MethodMetadata.cs" />
     <Compile Include="Migrations\201801281743230_InitialMigration.cs" />
@@ -186,6 +187,10 @@
     <Compile Include="Migrations\201801282334318_MethodMtdFinish.Designer.cs">
       <DependentUpon>201801282334318_MethodMtdFinish.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801290013471_AddMethodsToModel.cs" />
+    <Compile Include="Migrations\201801290013471_AddMethodsToModel.Designer.cs">
+      <DependentUpon>201801290013471_AddMethodsToModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NamespaceMetadata.cs" />
     <Compile Include="ParameterMetadata.cs" />
@@ -195,6 +200,7 @@
     <Compile Include="StaticEnum.cs" />
     <Compile Include="TypeKind.cs" />
     <Compile Include="TypeMetadata.cs" />
+    <Compile Include="VirtualEnum.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -301,6 +307,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801282334318_MethodMtdFinish.resx">
       <DependentUpon>201801282334318_MethodMtdFinish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801290013471_AddMethodsToModel.resx">
+      <DependentUpon>201801290013471_AddMethodsToModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
